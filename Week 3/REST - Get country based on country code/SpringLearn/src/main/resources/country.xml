@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Individual Country beans -->
+    <bean id="country1" class="com.cognizant.spring_learn.model.Country">
+        <constructor-arg name="code" value="IN"/>
+        <constructor-arg name="name" value="India"/>
+    </bean>
+
+    <bean id="country2" class="com.cognizant.spring_learn.model.Country">
+        <constructor-arg name="code" value="US"/>
+        <constructor-arg name="name" value="United States"/>
+    </bean>
+
+    <bean id="country3" class="com.cognizant.spring_learn.model.Country">
+        <constructor-arg name="code" value="GB"/>
+        <constructor-arg name="name" value="United Kingdom"/>
+    </bean>
+
+    <bean id="country4" class="com.cognizant.spring_learn.model.Country">
+        <constructor-arg name="code" value="JP"/>
+        <constructor-arg name="name" value="Japan"/>
+    </bean>
+
+    <bean id="country5" class="com.cognizant.spring_learn.model.Country">
+        <constructor-arg name="code" value="AU"/>
+        <constructor-arg name="name" value="Australia"/>
+    </bean>
+
+    <!-- List bean that groups all countries together; injected into CountryService -->
+    <bean id="countryList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="country1"/>
+                <ref bean="country2"/>
+                <ref bean="country3"/>
+                <ref bean="country4"/>
+                <ref bean="country5"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>

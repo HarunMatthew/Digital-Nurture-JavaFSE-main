@@ -1,0 +1,45 @@
+Difference between JPA, Hibernate and Spring Data JPA
+
+In Java development, JPA, Hibernate, and Spring Data JPA are closely related but they are not the same. Each one plays a different role in database handling.
+
+1. JPA (Java Persistence API)
+
+JPA is a Java specification (rule set) for managing relational data in Java applications. It defines how Java objects should be mapped to database tables, but it does not provide any implementation by itself.
+
+In simple words, JPA is just a blueprint or interface that tells how ORM (Object Relational Mapping) should work.
+
+It is only a specification (not a framework)
+It defines rules for ORM
+It needs an implementation like Hibernate to work
+
+Example: It is like a design plan for a house, not the actual house.
+
+2. Hibernate
+
+Hibernate is a real ORM framework and one of the most popular implementations of JPA.
+
+It follows JPA standards but also provides many additional features beyond JPA.
+
+It is an implementation of JPA
+Provides actual functionality to connect Java objects with database tables
+Offers advanced features like caching, lazy loading, and HQL (Hibernate Query Language)
+
+In simple words, Hibernate is the engine that actually performs database operations.
+
+3. Spring Data JPA
+
+Spring Data JPA is a part of Spring Framework that makes working with JPA even easier.
+
+It is built on top of JPA and Hibernate and reduces boilerplate code.
+
+It is not a replacement for JPA or Hibernate
+It simplifies database operations
+Provides ready-made methods like save(), findAll(), deleteById(), etc.
+No need to write complex DAO implementations
+
+In simple words, Spring Data JPA is like a shortcut layer that makes database coding easier and faster.
+
+Key Difference Summary
+JPA → A specification (rules)
+Hibernate → Implementation of JPA (does actual work)
+Spring Data JPA → Simplifies JPA usage inside Spring applications
